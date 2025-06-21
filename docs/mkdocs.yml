@@ -1,0 +1,72 @@
+
+site_name: Research Products Portal Documentation
+site_url: https://ascsn.github.io/research-products-portal/
+repo_url: https://github.com/ascsn/research-products-portal
+repo_name: ascsn/research-products-portal
+copyright: Copyright &copy; 2025 Advanced Scientific Computing and Statistics Network (ASCSN)
+
+# Directory for documentation files
+docs_dir: docs
+
+theme:
+  name: material
+  # If you don't want to use Material, or if it's not installed,
+  # you can fallback to a built-in theme like 'readthedocs' or 'mkdocs'.
+  # name: readthedocs
+  language: en
+  palette:
+    # Palette toggle for light vs dark mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes # Allows index.md to render as a section page
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+    - content.code.copy
+    # - toc.integrate # Integrates ToC into left sidebar, good for many sections
+
+nav:
+  - Home: index.md
+  - Introduction: 01-introduction.md
+  - Getting Started: 02-getting-started.md
+  - Managing Publications: 03-publications.md
+  - Managing Presentations: 04-presentations.md
+  - Viewing Entries: 05-viewing-entries.md
+  - Summary & Analytics: 06-analytics.md
+  - Data Management: 07-data-management.md
+  - Configuration: 08-configuration.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_style: tango
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Collaboration Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/heroicons/2.0.16/24/outline/academic-cap.svg" rel="stylesheet"> <!-- Example for icons, adjust as needed -->
+
+  <!-- Script to initialize __APP_CONFIG__ and inject environment variables -->
+  <!-- This block should ideally be populated by your CI/CD (e.g., Netlify snippet injection or build script) -->
+  <script>
+    window.__APP_CONFIG__ = {
+      // Example of how Netlify (or other platforms) might inject environment variables:
+      // AUTH0_DOMAIN: "%REACT_APP_AUTH0_DOMAIN%", // Placeholder Netlify might replace
+      // AUTH0_CLIENT_ID: "%REACT_APP_AUTH0_CLIENT_ID%" // Placeholder Netlify might replace
+      // If these are not replaced by the build process, they will be undefined,
+      // and config.ts will use its fallback values.
+    };
+    // For local development, you could manually define them here if needed, e.g.:
+    // window.__APP_CONFIG__.AUTH0_DOMAIN = "your-local-dev-domain";
+    // window.__APP_CONFIG__.AUTH0_CLIENT_ID = "your-local-dev-client-id";
+  </script>
+
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@auth0/auth0-react": "https://esm.sh/@auth0/auth0-react@^2.2.4",
+    "chart.js": "https://esm.sh/chart.js@^4.5.0"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-100">
+  <div id="root"></div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
