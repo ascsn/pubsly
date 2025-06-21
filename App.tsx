@@ -561,6 +561,18 @@ const App: React.FC = () => {
   };
 
 
+  // Handle Auth0 callback route
+  if (window.location.pathname === '/callback') {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 text-gray-100">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-4">Logging in...</h2>
+          <p className="text-lg">Please wait while we complete authentication.</p>
+        </div>
+      </div>
+    );
+  }
+
   let itemToEditInstance: Publication | Presentation | undefined = undefined;
   if (editingItem) {
     if (editingItem.type === 'publication') {
