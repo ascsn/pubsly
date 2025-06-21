@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ViewMode, Publication, Presentation } from '../types';
 import { SpeakerWaveIcon, DocumentPlusIcon, ListBulletIcon, ChartPieIcon } from './Navbar'; // Import icons
@@ -45,7 +44,7 @@ const HomeView: React.FC<HomeViewProps> = ({ setCurrentView, publications, prese
     <div className="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-extrabold text-sky-400 sm:text-5xl">
-          Welcome to the Research Portal
+          Welcome to Pubsly
         </h1>
         <p className="mt-4 text-xl text-gray-300">
           Manage your collaboration's publications and presentations with ease.

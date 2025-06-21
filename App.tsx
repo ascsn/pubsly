@@ -1,5 +1,3 @@
-
-
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { Publication, Presentation, ViewMode, PortalData, Author, ExportFormat } from './types';
 import PublicationForm from './components/PublicationForm';
@@ -13,7 +11,7 @@ import config from './config'; // Import the config object
 import { useAuth0 } from '@auth0/auth0-react';
 import { fetchCitationCountFromSemanticScholar } from './services/publicationService';
 
-const APP_DATA_KEY = 'researchPortalData';
+const APP_DATA_KEY = 'pubslyData';
 
 // Utility function to strip HTML/XML tags (copied here for self-containment, or could be imported if modularized)
 const stripHtmlTags = (str: string | undefined): string | undefined => {
@@ -230,7 +228,7 @@ const App: React.FC = () => {
   const exportPortalDataAsJson = () => {
     const portalData: PortalData = { publications, presentations, lastSpeakerName };
     const jsonString = JSON.stringify(portalData, null, 2);
-    triggerDownload('research_portal_data.json', jsonString, 'application/json');
+    triggerDownload('pubsly_data.json', jsonString, 'application/json');
     showAlert('Data exported as JSON.', 'success');
   };
 
@@ -250,7 +248,7 @@ const App: React.FC = () => {
     let totalCitations = 0;
     let mostCitedPublication: Publication | null = null;
 
-    pubsToExport.forEach(pub => {
+    pubsToExport.forEach((pub: Publication) => {
       if (typeof pub.citationCount === 'number') {
         publicationsWithCitations++;
         totalCitations += pub.citationCount;
@@ -266,7 +264,7 @@ const App: React.FC = () => {
       textContent += `Total citations: ${totalCitations}\n`;
       textContent += `Average citations per publication (with data): ${(totalCitations / publicationsWithCitations).toFixed(2)}\n`;
       if (mostCitedPublication) {
-        textContent += `Most cited: "${stripHtmlTags(mostCitedPublication.title)}" (${mostCitedPublication.citationCount} citations)\n`;
+        textContent += `Most cited: \"${stripHtmlTags((mostCitedPublication as Publication).title || 'N/A')}\" (${(mostCitedPublication as Publication).citationCount || 0} citations)\n`;
       }
     } else {
       textContent += `No citation data available for ${activeTagFilter ? 'filtered' : 'any'} publications.\n`;
@@ -318,7 +316,7 @@ const App: React.FC = () => {
         textContent += `\n=== PRESENTATIONS ===\nPresentations are not filtered by tags and are not included in this tagged export.\nTo export presentations, clear the tag filter or use JSON export.\n\n`;
     }
     
-    const filename = `research_portal_data${activeTagFilter ? `_tag_${activeTagFilter.replace(/[\s/]+/g, '_').toLowerCase()}` : ''}.txt`;
+    const filename = `pubsly_data${activeTagFilter ? `_tag_${activeTagFilter.replace(/\s+/g, '_').toLowerCase()}` : ''}.txt`;
     triggerDownload(filename, textContent, 'text/plain;charset=utf-8');
     showAlert(`Data exported as Plain Text${activeTagFilter ? ` (Filtered by tag: ${activeTagFilter})` : ''}.`, 'success');
   };

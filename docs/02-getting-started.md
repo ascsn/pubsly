@@ -38,7 +38,7 @@ Pubsly's authentication behavior depends on its configuration (`config.ts` file)
 
 The main navigation interface is the **Navbar** located at the top of the page.
 
-*   **Portal Title/Logo (Top Left):** Clicking on the "Research Portal" title or the academic cap icon will always take you back to the **Home page**.
+*   **Portal Title/Logo (Top Left):** Clicking on the "Pubsly" title or the academic cap icon will always take you back to the **Home page**.
 *   **Main Navigation Buttons:**
     *   **Add Publication:** (Authenticated users only) Takes you to the form for adding a new publication.
     *   **Add Presentation:** (Authenticated users only) Takes you to the form for adding a new presentation.

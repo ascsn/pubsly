@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { ViewMode, ExportFormat } from '../types';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -485,7 +484,7 @@ const Navbar: React.FC<NavbarProps> = ({
           >
             <AcademicCapIcon className="h-10 w-10 text-sky-400 group-hover:text-sky-300 transition-colors" />
             <span className="ml-3 text-xl sm:text-2xl font-bold text-gray-100 group-hover:text-gray-50 transition-colors tracking-tight">
-              Research Portal
+              Pubsly
             </span>
           </button>
 

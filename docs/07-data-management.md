@@ -1,4 +1,3 @@
-
 # 7. Data Management
 
 The Research Collaboration Portal provides several tools for managing your data, including import, export, and citation count refreshing. These features are typically available only to authenticated users (if authentication is enabled).
@@ -23,7 +22,7 @@ You can export your portal data in several formats. Export options are usually f
 
 1.  **Export as JSON:**
     *   **Purpose:** This is the recommended format for creating a complete backup of your portal data or for transferring data to another instance of this portal.
-    *   **Content:** Exports all publications, all presentations, and the last speaker name into a single JSON file (e.g., `research_portal_data.json`).
+    *   **Content:** Exports all publications, all presentations, and the last speaker name into a single JSON file (e.g., `pubsly_data.json`).
     *   **Filtering:** This export always includes *all* data, regardless of any active tag filters in the "View Entries" list.
 
 2.  **Export as Plain Text (.txt):**
@@ -35,7 +34,7 @@ You can export your portal data in several formats. Export options are usually f
         *   A detailed list of presentations, including title, speaker, date, location, link, and file info.
     *   **Filtering:**
         *   If a tag filter is active in the "View Entries" list when you initiate this export, **only the filtered publications** will be included in the export. The citation summary will also reflect only these filtered publications.
-        *   The filename will indicate if a tag filter was applied (e.g., `research_portal_data_tag_machine-learning.txt`).
+        *   The filename will indicate if a tag filter was applied (e.g., `pubsly_data_tag_machine-learning.txt`).
         *   Presentations are **not** filtered by tags in this export if a publication tag filter is active; a note will indicate this. To export all presentations, clear the tag filter or use JSON export.
 
 3.  **Export as BibTeX (.bib):**

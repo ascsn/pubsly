@@ -1,6 +1,6 @@
 {
-  "name": "Research Collaboration Portal",
-  "description": "A web portal for researchers in a collaboration to easily enter their new papers and presentations. It supports DOI parsing for publications and manual entry for presentations.",
+  "name": "Pubsly",
+  "description": "Pubsly is a web portal for researchers to manage publications and presentations collaboratively. It supports DOI parsing for publications and manual entry for presentations.",
   "requestFramePermissions": [],
   "prompt": ""
 }
