@@ -14,8 +14,8 @@ export interface AppConfig {
 
 // Attempt to get Auth0 config from environment variables injected into window.__APP_CONFIG__
 // These would be set by a script in index.html, populated by the deployment platform (e.g., Netlify)
-const envAuth0Domain = (window as any).__APP_CONFIG__?.AUTH0_DOMAIN;
-const envAuth0ClientId = (window as any).__APP_CONFIG__?.AUTH0_CLIENT_ID;
+const envAuth0Domain = process.env.AUTH0_DOMAIN || (window as any).__APP_CONFIG__?.AUTH0_DOMAIN;
+const envAuth0ClientId = process.env.AUTH0_CLIENT_ID || (window as any).__APP_CONFIG__?.AUTH0_CLIENT_ID;
 
 const config: AppConfig = {
   // === AUTH0 CONFIGURATION ===
