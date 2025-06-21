@@ -23,12 +23,12 @@ const config: AppConfig = {
   // Prioritize environment variables, then fall back to these hardcoded values.
   // IMPORTANT: For local development, if you don't inject env vars, these hardcoded values will be used.
   // Replace placeholders if enableAuth is true and env vars are not set for local dev.
-  auth0Domain: envAuth0Domain || 'dev-pe5y28pm1tpev8ns.us.auth0.com', // Example: 'YOUR_AUTH0_DOMAIN' or 'dev-xxxxxxxx.us.auth0.com'
-  auth0ClientId: envAuth0ClientId || 'PAcDpl4AukGY8Asab3723MHaCvJr23kf', // Example: 'YOUR_AUTH0_CLIENT_ID' or 'yourAuth0ApplicationClientId'
+  auth0Domain: envAuth0Domain, // Example: 'YOUR_AUTH0_DOMAIN' or 'dev-xxxxxxxx.us.auth0.com'
+  auth0ClientId: envAuth0ClientId, // Example: 'YOUR_AUTH0_CLIENT_ID' or 'yourAuth0ApplicationClientId'
   
   // Set to true to enable Auth0 authentication. 
   // Set to false to bypass authentication and grant full access to all users.
-  enableAuth: false, 
+  enableAuth: true, 
 
   // === APPLICATION SETTINGS ===
   appName: "Research Products Portal",
