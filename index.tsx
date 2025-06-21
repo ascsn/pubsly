@@ -28,7 +28,7 @@ const AppWrapper: React.FC = () => {
         domain={config.auth0Domain}
         clientId={config.auth0ClientId}
         authorizationParams={{
-          redirect_uri: window.location.origin
+          redirect_uri: `${window.location.origin}/callback`
         }}
       >
         <App />
