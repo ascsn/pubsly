@@ -1,4 +1,3 @@
-
 site_name: Research Products Portal Documentation
 site_url: https://ascsn.github.io/research-products-portal/
 repo_url: https://github.com/ascsn/research-products-portal
@@ -40,21 +39,30 @@ theme:
     - search.highlight
     - content.code.annotate
     - content.code.copy
-    # - toc.integrate # Integrates ToC into left sidebar, good for many sections
+    - toc.integrate # Integrates ToC into left sidebar, good for many sections
 
 nav:
   - Home: index.md
-  - Introduction: 01-introduction.md
-  - Getting Started: 02-getting-started.md
-  - Managing Publications: 03-publications.md
-  - Managing Presentations: 04-presentations.md
-  - Viewing Entries: 05-viewing-entries.md
-  - Summary & Analytics: 06-analytics.md
-  - Data Management: 07-data-management.md
-  - Configuration: 08-configuration.md
+  - Overview:
+      - Introduction: 01-introduction.md
+      - Getting Started: 02-getting-started.md
+  - Managing Content:
+      - Publications: 03-publications.md
+      - Presentations: 04-presentations.md
+      - Viewing Entries: 05-viewing-entries.md
+  - Analytics:
+      - Summary & Analytics: 06-analytics.md
+  - Data Management:
+      - Data Management: 07-data-management.md
+      - Configuration: 08-configuration.md
 
 plugins:
-  - search
+  - search:
+      boost:
+        - title: 2
+        - h1: 1.5
+        - h2: 1.2
+        - h3: 1.1
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -69,4 +77,6 @@ markdown_extensions:
       permalink: true
   - attr_list
   - md_in_html
+  - pymdownx.tabbed
+  - pymdownx.collapse
 
