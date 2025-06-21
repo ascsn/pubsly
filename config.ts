@@ -1,4 +1,3 @@
-
 export interface AppConfig {
   auth0Domain: string;
   auth0ClientId: string;
@@ -31,7 +30,7 @@ const config: AppConfig = {
   enableAuth: true, 
 
   // === APPLICATION SETTINGS ===
-  appName: "Research Products Portal",
+  appName: "Pubsly", // Updated application name
   defaultTags: ['research', 'portal-entry', 'collaboration-xyz', 'experiment'], // Example default tags
 
   // === API ENDPOINTS ===

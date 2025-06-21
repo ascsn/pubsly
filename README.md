@@ -1,6 +1,6 @@
-# Research Products Portal
+# Pubsly
 
-The Research Products Portal is a web-based application designed to help research groups and collaborations easily track, manage, and showcase their scholarly output. It provides a centralized platform for team members to log new publications (papers, articles, preprints) and presentations (talks, posters).
+Pubsly is a web-based application designed to help research groups and collaborations easily track, manage, and showcase their scholarly output. It provides a centralized platform for team members to log new publications (papers, articles, preprints) and presentations (talks, posters).
 
 This portal is proudly developed by the [Advanced Scientific Computing and Statistics Network (ASCSN)](https://ascsn.net).
 
@@ -42,8 +42,8 @@ This portal is proudly developed by the [Advanced Scientific Computing and Stati
 
 1.  **Clone the repository (if applicable):**
     ```bash
-    git clone https://github.com/ascsn/research-products-portal.git
-    cd research-products-portal
+    git clone https://github.com/ascsn/pubsly.git
+    cd pubsly
     ```
 
 2.  **Configure the Portal:**
@@ -63,7 +63,7 @@ This portal is proudly developed by the [Advanced Scientific Computing and Stati
                     *   If environment variables are not injected (common for local development), the application will fall back to using the `auth0Domain` and `auth0ClientId` values directly from `config.ts`.
                     *   Replace the placeholder values for `auth0Domain` and `auth0ClientId` in `config.ts` with your actual Auth0 application credentials for local testing if you don't set up local environment variable injection.
             *   In your Auth0 Application settings, configure:
-                *   **Allowed Callback URLs:** Add `http://localhost:YOUR_PORT` (e.g., `http://localhost:8000` if serving locally) and `YOUR_APP_DEPLOYMENT_URL` (e.g., `https://ascsn.github.io/research-products-portal/`).
+                *   **Allowed Callback URLs:** Add `http://localhost:YOUR_PORT` (e.g., `http://localhost:8000` if serving locally) and `YOUR_APP_DEPLOYMENT_URL` (e.g., `https://ascsn.github.io/pubsly/`).
                 *   **Allowed Logout URLs:** Add your local and deployed URLs.
                 *   **Allowed Web Origins:** Add your local and deployed URLs.
         *   If `enableAuth` is `false`, users will have full access without login.
@@ -109,4 +109,4 @@ See the [LICENSE](https://www.gnu.org/licenses/gpl-3.0.html) file or website for
 
 ## Acknowledgements
 
-This Research Products Portal was developed by the [Advanced Scientific Computing and Statistics Network (ASCSN)](https://ascsn.net).
+Pubsly was developed by the [Advanced Scientific Computing and Statistics Network (ASCSN)](https://ascsn.net).

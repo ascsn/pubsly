@@ -1,4 +1,3 @@
-
 # 8. Configuration (For Administrators/Developers)
 
 The Research Collaboration Portal's behavior can be customized through a central configuration file named `config.ts`, located in the root directory of the application source code. This file allows administrators or developers to tailor the portal to specific needs without modifying the core application logic.
@@ -55,7 +54,7 @@ export default config;
 *   **`appName: string`**
     *   The name of your portal (e.g., "Particle Physics Group Portal", "Marine Biology Research Hub").
     *   This name is displayed in the page title, Navbar (potentially, depending on styling), and footer.
-    *   Example: `"Research Products Portal"`
+    *   Example: `"Pubsly"`
 
 *   **`defaultTags: string[]`**
     *   An array of strings representing default or suggested tags that will appear as clickable "pills" in the publication form. This helps ensure consistency in tagging.
