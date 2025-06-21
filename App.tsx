@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Publication, Presentation, ViewMode, PortalData, Author, ExportFormat } from './types';
 import PublicationForm from './components/PublicationForm';
 import PresentationForm from './components/PresentationForm';
@@ -23,6 +24,15 @@ const stripHtmlTags = (str: string | undefined): string | undefined => {
     return str.replace(/<[^>]*>?/gm, '');
   }
 };
+
+const CallbackPage: React.FC = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 text-gray-100">
+    <div className="text-center">
+      <h2 className="text-2xl font-bold mb-4">Logging in...</h2>
+      <p className="text-lg">Please wait while we complete authentication.</p>
+    </div>
+  </div>
+);
 
 const App: React.FC = () => {
   const [publications, setPublications] = useState<Publication[]>([]);
@@ -561,18 +571,6 @@ const App: React.FC = () => {
   };
 
 
-  // Handle Auth0 callback route
-  if (window.location.pathname === '/callback') {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 text-gray-100">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold mb-4">Logging in...</h2>
-          <p className="text-lg">Please wait while we complete authentication.</p>
-        </div>
-      </div>
-    );
-  }
-
   let itemToEditInstance: Publication | Presentation | undefined = undefined;
   if (editingItem) {
     if (editingItem.type === 'publication') {
@@ -582,7 +580,7 @@ const App: React.FC = () => {
     }
   }
 
-  return (
+  const MainAppContent = (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-gray-100">
       <Navbar 
         currentView={currentView} 
@@ -597,7 +595,6 @@ const App: React.FC = () => {
       />
       <main className="container mx-auto p-4 md:p-8">
         {alert && <AlertMessage message={alert.message} type={alert.type} onClose={() => setAlert(null)} />}
-        
         {currentView === ViewMode.Home && (
           <HomeView 
             setCurrentView={setCurrentView} 
@@ -653,6 +650,15 @@ const App: React.FC = () => {
         {config.appName} &copy; {new Date().getFullYear()}
       </footer>
     </div>
+  );
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/callback" element={<CallbackPage />} />
+        <Route path="*" element={MainAppContent} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
