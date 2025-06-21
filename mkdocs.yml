@@ -78,5 +78,5 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.tabbed
-  - pymdownx.collapse
+  # - pymdownx.collapse
 
