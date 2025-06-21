@@ -1,7 +1,6 @@
-
 # 3. Managing Publications
 
-This section covers all aspects of adding, importing, and managing research publications within the portal. Access to adding, editing, and deleting publications typically requires you to be logged in (if authentication is enabled).
+This section covers all aspects of adding, importing, and managing research publications within Pubsly. Access to adding, editing, and deleting publications typically requires you to be logged in (if authentication is enabled).
 
 ## Adding a Single Publication
 

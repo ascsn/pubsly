@@ -1,15 +1,14 @@
-
 # 1. Introduction
 
-## Overview of the Portal
+## Overview of Pubsly
 
-The Research Collaboration Portal is a web-based application designed to help research groups and collaborations easily track, manage, and showcase their scholarly output. It provides a centralized platform for team members to log new publications (papers, articles, preprints) and presentations (talks, posters).
+Pubsly is a web-based application designed to help research groups and collaborations easily track, manage, and showcase their scholarly output. It provides a centralized platform for team members to log new publications (papers, articles, preprints) and presentations (talks, posters).
 
-The portal aims to simplify data entry by leveraging metadata from external services like CrossRef (for DOIs) and arXiv, and by allowing bulk imports from common researcher profiles like ORCID and Google Scholar. It also offers features for data analysis, visualization, and export, making it a valuable tool for monitoring research progress and impact.
+Pubsly aims to simplify data entry by leveraging metadata from external services like CrossRef (for DOIs) and arXiv, and by allowing bulk imports from common researcher profiles like ORCID and Google Scholar. It also offers features for data analysis, visualization, and export, making it a valuable tool for monitoring research progress and impact.
 
 ## Key Features
 
-The portal offers a range of features to streamline the management of research contributions:
+Pubsly offers a range of features to streamline the management of research contributions:
 
 *   **Easy Data Entry:**
     *   Add publications quickly by parsing metadata from DOI or arXiv IDs.
@@ -42,4 +41,4 @@ This portal is designed to be a user-friendly tool to help your research collabo
 
 ## Developed By
 
-The Research Collaboration Portal is developed and maintained by the [Advanced Scientific Computing and Statistics Network (ASCSN)](https://ascsn.net). ASCSN is committed to fostering advancements in scientific research by providing robust tools, expertise in computing, and statistical analysis support to the scientific community. Their mission focuses on enabling researchers to tackle complex challenges and accelerate discovery.
+Pubsly is developed and maintained by the [Advanced Scientific Computing and Statistics Network (ASCSN)](https://ascsn.net). ASCSN is committed to fostering advancements in scientific research by providing robust tools, expertise in computing, and statistical analysis support to the scientific community. Their mission focuses on enabling researchers to tackle complex challenges and accelerate discovery.

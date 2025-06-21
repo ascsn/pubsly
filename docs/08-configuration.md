@@ -1,6 +1,6 @@
 # 8. Configuration (For Administrators/Developers)
 
-The Research Collaboration Portal's behavior can be customized through a central configuration file named `config.ts`, located in the root directory of the application source code. This file allows administrators or developers to tailor the portal to specific needs without modifying the core application logic.
+Pubsly's behavior can be customized through a central configuration file named `config.ts`, located in the root directory of the application source code. This file allows administrators or developers to tailor Pubsly to specific needs without modifying the core application logic.
 
 ## Overview of `config.ts`
 

@@ -1,18 +1,17 @@
-
 # 2. Getting Started
 
-This section will guide you through accessing the portal, understanding the authentication process (if applicable), and navigating its main features.
+This section will guide you through accessing Pubsly, understanding the authentication process (if applicable), and navigating its main features.
 
-## Accessing the Portal
+## Accessing Pubsly
 
-To use the Research Collaboration Portal, simply open the provided URL in a modern web browser (e.g., Chrome, Firefox, Safari, Edge). The portal is designed to be responsive and should work well on desktops, tablets, and mobile devices.
+To use Pubsly, simply open the provided URL in a modern web browser (e.g., Chrome, Firefox, Safari, Edge). Pubsly is designed to be responsive and should work well on desktops, tablets, and mobile devices.
 
 ## Authentication
 
-The portal's authentication behavior depends on its configuration (`config.ts` file).
+Pubsly's authentication behavior depends on its configuration (`config.ts` file).
 
 *   **If Authentication is DISABLED (`enableAuth: false`):**
-    *   You will have immediate full access to all features of the portal without needing to log in. This includes adding, editing, deleting entries, and all data management functions.
+    *   You will have immediate full access to all features of Pubsly without needing to log in. This includes adding, editing, deleting entries, and all data management functions.
     *   There will be no "Login" or "Logout" buttons visible.
 
 *   **If Authentication is ENABLED (`enableAuth: true` and Auth0 is configured):**
@@ -24,18 +23,18 @@ The portal's authentication behavior depends on its configuration (`config.ts` f
     *   **Logging In:**
         *   Click the "Login" button in the Navbar.
         *   You will be redirected to the Auth0 login page. Follow the prompts to authenticate with your credentials.
-        *   Upon successful login, you will be redirected back to the portal.
+        *   Upon successful login, you will be redirected back to Pubsly.
     *   **Private View (Logged In):**
         *   You will have full access to all features, including adding, editing, deleting, importing, and exporting data.
         *   Your username (or email) will be displayed in the Navbar, along with a "Logout" button.
     *   **Logging Out:**
         *   Click the "Logout" button in the Navbar.
-        *   You will be logged out and returned to the public view of the portal.
+        *   You will be logged out and returned to the public view of Pubsly.
     *   **If Auth0 is enabled but NOT configured correctly by the administrator:**
-        *   The portal will behave as if you are not logged in (public read-only access for most features).
+        *   Pubsly will behave as if you are not logged in (public read-only access for most features).
         *   A warning message will appear in the browser's developer console for the administrator.
 
-## Navigating the Portal
+## Navigating Pubsly
 
 The main navigation interface is the **Navbar** located at the top of the page.
 
@@ -56,7 +55,7 @@ The main navigation interface is the **Navbar** located at the top of the page.
 
 ### Home Page
 
-The default landing page of the portal. It typically shows:
+The default landing page of Pubsly. It typically shows:
 *   A welcome message.
 *   A quick summary of the total number of publications and presentations tracked.
 *   Feature cards that provide quick links to:
@@ -65,4 +64,4 @@ The default landing page of the portal. It typically shows:
     *   Browse All Entries
     *   View Summary & Analytics
 
-Use the Navbar or the feature cards on the Home page to access different sections of the portal. If you are editing an entry, navigation may be disabled until you save or cancel your changes to prevent data loss.
+Use the Navbar or the feature cards on the Home page to access different sections of Pubsly. If you are editing an entry, navigation may be disabled until you save or cancel your changes to prevent data loss.
